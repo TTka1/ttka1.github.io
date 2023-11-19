@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Art of Clean Code in PHP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/68e5876c59.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutMe">About me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <img src="./images/clean-code-carousel.png" class="w-100 shadow-1-strong rounded" alt="...">
+    </div>
+
+    <div class="container text-center py-5">
+        <h2>The Art of Clean Code in PHP</h2>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>Introduction:</h5>
+                <p>In the world of software development, clean code is more than just a good practice—it's an art form. Clean code is readable, maintainable, and a joy to work with. Today, we'll embark on a journey into the realm of clean code, using PHP as our canvas. Join us as we explore the principles, benefits, and practical tips for writing clean and elegant PHP code.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <img
+                    src="./images/clean-code.png"
+                    class="shadow-1-strong rounded"
+                    alt="Boat on Calm Water"
+                />
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>The Essence of Clean Code:</h5>
+                <p>Clean code is not just about functionality; it's about clarity and simplicity. It's the kind of code that communicates its purpose effortlessly and is a pleasure for developers to read, understand, and extend.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>Principles of Clean Code:</h5>
+
+                <ol>
+                    <li>
+                        <b>Meaningful Variable Names:</b>
+                        <ul>
+                            <li>Choose names that convey the purpose of the variable. Avoid single-letter names; opt for descriptive and concise terms.</li>
+                        </ul>  
+                    </li>
+                    <li>
+                        <b>Indentation and Formatting:</b>
+                        <ul>
+                            <li>Consistent indentation improves readability. Use a standardized format to enhance the overall structure of your code.</li>
+                        </ul>  
+                    </li>
+                    <li>
+                        <b>Functions Should Do One Thing:</b>
+                        <ul>
+                            <li>Follow the Single Responsibility Principle. Functions should have a clear and singular purpose.</li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <b>Comments Where Necessary:</b>
+                        <ul>
+                            <li>Write comments that explain the why, not the what. Let the code speak for itself whenever possible.</li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <b>DRY (Don't Repeat Yourself):</b>
+                        <ul>
+                            <li>Eliminate redundancy. If a piece of code is repeated, encapsulate it into a function or class.</li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <b>Small, Focused Classes and Functions:</b>
+                        <ul>
+                            <li>Keep classes and functions small and focused on a specific task. This enhances maintainability and makes code easier to understand.</li>
+                        </ul> 
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>Clean Code in Action with PHP:</h5>
+                <p>Let's dive into some PHP-specific examples to illustrate the principles of clean code.</p>
+                <ol>
+                    <li>
+                        <b>Descriptive Variable Names:</b>
+                        <br>
+                        <br>
+                        <code>
+                            // Unclean <br>
+                            $a = getRecords(); <br>
+                            <br>
+                            // Clean <br>
+                            $records = fetchEmployeeRecords();<br>
+                        </code>
+                        <br>
+                    </li>
+                    <li>
+                        <b>Consistent Formatting:</b>
+                        <br>
+                        <br>
+                        <code>
+                            // Unclean <br>
+                            function calculate ($a,$b){return $a+$b;} <br>
+                            <br>
+                            // Clean <br>
+                            function calculate($a, $b) {<br>
+                                return $a + $b;<br>
+                            }<br>
+                        </code>
+                        <br>
+                    </li>
+                    <li>
+                        <b>Applying the Single Responsibility Principle:</b>
+                        <br>
+                        <br>
+                        <code>
+                            // Unclean <br>
+                            function manageUser($user) { <br>
+                                //Code for managing user data<br>
+                                //Code for sending a welcome email<br>
+                             } <br>
+                            <br>
+                            // Clean <br>
+                            function manageUserData($user) {<br>
+                                //Code for managing user data<br>
+                            }
+                            <br>
+                            <br>
+                            function sendWelcomeEmail($user) {<br>
+                                //Code for sending a welcome email<br>
+                            }<br>
+                        </code>
+                        <br>
+                    </li>
+                </ol> 
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>Tools for Ensuring Clean Code in PHP:</h5>
+                <p>Explore tools like PHP_CodeSniffer and PHPStan that automate the process of enforcing coding standards and analyzing code quality.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>Benefits of Clean Code:</h5>
+                <ul>
+                    <li>
+                        <b>Readability: </b>Easy to read and understand, even for developers unfamiliar with the codebase.
+                    </li>
+                    <li>
+                        <b>Maintainability: </b>Easier to maintain and extend, reducing the risk of introducing bugs during updates.
+                    </li>
+                    <li>
+                        <b>Collaboration: </b>Facilitates collaboration among team members, as clean code is a universal language.
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row px-md-5 mx-md-5">
+            <div class="col-12">
+                <h5>Conclusion:</h5>
+                <p>Clean code is a gift to your future self and your fellow developers. In the world of PHP, where readability and simplicity matter, the principles of clean code are paramount. By embracing these principles and incorporating them into your PHP development practices, you're not just writing code—you're crafting a masterpiece that stands the test of time. Elevate your PHP code from functional to elegant, and join the ranks of developers who understand the true artistry of clean code.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center py-3">
+        <div class="row py-5">
+            <div class="col-12">
+                <h2>Thank you for taking the time to read my article.</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3">
+        <div class="row py-5">
+          <div class="col-12 col-md-6">
+            <img
+              src="./images/developer.png"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Boat on Calm Water"
+            />
+          </div>
+          <div class="col-12 col-md-6 pt-5 p-md-0 align-self-center">
+            <h2 id="aboutMe">About me</h2>
+            <p>
+              <b>Hey there!</b> I'm Tomislav Tkalec, a passionate Junior Software Developer on a journey to turn lines of code into meaningful solutions. My love for problem-solving led me to the world of software development, where every challenge is an opportunity to learn and grow.
+            </p>
+            <p>
+                I thrive in the dynamic realm of coding, constantly seeking ways to enhance my skills and contribute to innovative projects. Whether it's crafting clean and efficient code or collaborating with a team to bring ideas to life, I find joy in the creative process of building software.
+            </p>
+          </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start text-muted pt-3">
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>Copyright © 2023 All rights reserved | Made with <i class="fa-solid fa-heart"></i> by Tomislav Tkalec</p>
+        </div>
+    </footer>
+
+</body>
+
+</html> 
